@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Yo como mercaderista de DEMO" tests="1" skipped="1" failures="0" errors="0" timestamp="2021-12-31T16:02:13" hostname="22LAP5CD1346NNV" time="0.083">
+  <properties/>
+  <testcase name="El usuario tiene la posisbilidad de seguir la empresa en sus redes sociales" classname="Yo como mercaderista de DEMO" time="0.083">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[11:02:13.546 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+11:02:13.553 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+          __  _____ _____ ____ _____   ____  _____ _   _ ____ ___ _   _  ____ 
+ _       / / |_   _| ____/ ___|_   _| |  _ \| ____| \ | |  _ \_ _| \ | |/ ___|
+(_)____ / /    | | |  _| \___ \ | |   | |_) |  _| |  \| | | | | ||  \| | |  _ 
+ |_____/ /     | | | |___ ___) || |   |  __/| |___| |\  | |_| | || |\  | |_| |
+(_)   /_/      |_| |_____|____/ |_|   |_|   |_____|_| \_|____/___|_| \_|\____|
+                                                                                
+
+TEST PENDING: El usuario tiene la posisbilidad de seguir la empresa en sus redes sociales
+---------------------------------------------------------------------------------
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
