@@ -16,4 +16,4 @@ Feature: Como gerente de Marketing de DEMO
   Scenario: El usuario identifica el menu de la pagina
     Given que el usuario este en la pagina principal
     When carga el contenido
-    Then selecciona cualquier opcion del menu OUR PRODUCTS
+    Then selecciona cualquier opcion del menu CONTACT US, POPULAR ITEMS, SPECIAL OFFER, OUR PRODUCTS

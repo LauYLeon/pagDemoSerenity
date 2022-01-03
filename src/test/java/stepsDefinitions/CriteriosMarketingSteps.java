@@ -7,7 +7,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class CriteriosMarketingSteps {
     WebDriver driver;
@@ -35,7 +34,7 @@ public class CriteriosMarketingSteps {
     }
 
     @Then("^selecciona cualquier opcion del menu (.*)$")
-    public void seleccionaCualquierOpcionDelMenu(String opcion) throws InterruptedException {
+    public void seleccionaCualquierOpcionDelMenu(String opcion) {
         criteriosMarketingActions.opcionMenu(opcion);
     }
 

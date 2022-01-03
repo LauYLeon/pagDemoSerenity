@@ -57,13 +57,13 @@ public class PagoLineaSteps {
     }
 
     @When("^el usuario escoge el metodo de pago (.*)$")
-    public void elUsuarioEscogeElMetodoDePago(String tipoPago) throws InterruptedException {
+    public void elUsuarioEscogeElMetodoDePago(String tipoPago){
         pagoLineaActions.seleccionMetodoPago(tipoPago);
     }
 
     @Then("^el usuario deberia poder ver un mensaje de confirmacion (.*)$")
-    public void elUsuarioDeberiaPoderVerUnMensajeDeConfirmacion(String msjConfirmacion) throws InterruptedException {
-       pagoLineaActions.validarMsjConfirmacionCompra(msjConfirmacion);
+    public void elUsuarioDeberiaPoderVerUnMensajeDeConfirmacion(String msjConfirmacion) {
+        pagoLineaActions.validarMsjConfirmacionCompra(msjConfirmacion);
 
     }
 }

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.CriteriosMarketingPage;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -24,10 +25,6 @@ public class CriteriosMarketingActions extends CriteriosMarketingPage {
         int cantidadProductos = productos.size();
         assertThat("La cantidad deberia ser mayor o igual a 5",
                 5, Matchers.greaterThanOrEqualTo(cantidadProductos));
-        for (int i = 0; i < cantidadProductos; i++) {
-            String textProductos = productos.get(i).getText();
-            //System.out.println("CATEGORIA DE PRODUCTOS: " + textProductos);
-        }
     }
 
     public void bannerPublicidad() {
@@ -44,10 +41,18 @@ public class CriteriosMarketingActions extends CriteriosMarketingPage {
         }
     }
 
-    public void opcionMenu(String opcionMen) throws InterruptedException {
-        String nombreOpcion = getDriver().findElement(By.xpath("//a[contains(.,'" + opcionMen + "')]")).getText();
+    public void opcionMenu(String opcionMen) {
+        List<String> opcionesFeature = new ArrayList<>();
+        String[] pruebaSeparar = opcionMen.split(", ");
+        List<WebElement> nombreOpciones = getDriver().findElements(By.xpath("//ul[@class='roboto-light desktop-handler']/li[@class='nav-li-Links']"));
+        int cantidadOpciones = nombreOpciones.size();
+        List<String> menuPagina = new ArrayList<>();
+        for (int i = 0; i < cantidadOpciones; i++) {
+            String text = nombreOpciones.get(i).getText();
+            menuPagina.add(text);
+            opcionesFeature.add(pruebaSeparar[i]);
+        }
         assertThat("Los titulos deberian coincidir",
-                opcionMen, Matchers.greaterThanOrEqualTo(nombreOpcion));
-        getDriver().findElement(By.xpath("//a[contains(.,'" + opcionMen + "')]")).click();
+                menuPagina, Matchers.equalTo(opcionesFeature));
     }
 }

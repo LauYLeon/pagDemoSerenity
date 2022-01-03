@@ -3,7 +3,6 @@ package actions;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 
 import java.util.List;
@@ -20,7 +19,6 @@ public class HomeActions extends HomePage {
         WebElement producto = getDriver().findElement(By.xpath("//div[contains(@id,'" + articulo + "Img')]"));
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click()", producto);
-        // producto.click();
         getBtnComprar().click();
         getBtnAddCarrito().click();
     }

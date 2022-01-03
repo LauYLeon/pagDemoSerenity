@@ -41,6 +41,8 @@ public class PagoLineaPage extends BasePage {
     private WebElementFacade btnComprarMasterCredit;
     @FindBy(xpath = "//button[@id='pay_now_btn_MasterCredit']")
     private WebElementFacade btnPayNowMasterCredit;
+    @FindBy(xpath = "//button[contains(@id,'pay_now_btn_ManualPayment')]")
+    private WebElementFacade btnPagarAhora;
     @FindBy(xpath = "//label[@class='edit  ng-scope']")
     private WebElementFacade btnEditarMasterCredit;
     @FindBy(xpath = "//input[contains(@id,'creditCard')]")
@@ -219,5 +221,9 @@ public class PagoLineaPage extends BasePage {
 
     public WebElementFacade getBtnPayNowMasterCredit() {
         return btnPayNowMasterCredit;
+    }
+
+    public WebElementFacade getBtnPagarAhora() {
+        return btnPagarAhora;
     }
 }
